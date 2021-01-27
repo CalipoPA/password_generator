@@ -1,5 +1,7 @@
 import random
 import string
+import pyperclip
+import time
 from string import ascii_letters, digits
 
 
@@ -11,4 +13,9 @@ def generator(size):
 
 quantity = int(input("How many digits do you want the password to have?: "))
 pasw = generator(quantity)
-print(pasw)
+
+pyperclip.copy(pasw)
+print("Your password has been copied to the clipboard ")
+
+time.sleep(10)
+quit()
